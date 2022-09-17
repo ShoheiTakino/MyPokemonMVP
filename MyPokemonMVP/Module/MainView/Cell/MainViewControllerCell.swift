@@ -5,4 +5,8 @@
 //  Created by 滝野翔平 on 2022/09/17.
 //
 
-import Foundation
+import UIKit
+
+final class MainViewControllerCell: UICollectionViewCell {
+    
+}
