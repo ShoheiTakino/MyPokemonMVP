@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+protocol MainViewPresenterInput: AnyObject {
+    
+}
+
+protocol MainViewPresenterOutput: AnyObject {
+    
+}
+
+final class MainViewPresenter {
+    
+}
