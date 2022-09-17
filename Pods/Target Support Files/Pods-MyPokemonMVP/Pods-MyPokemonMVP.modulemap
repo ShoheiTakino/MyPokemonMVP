@@ -1,0 +1,6 @@
+framework module Pods_MyPokemonMVP {
+  umbrella header "Pods-MyPokemonMVP-umbrella.h"
+
+  export *
+  module * { export * }
+}

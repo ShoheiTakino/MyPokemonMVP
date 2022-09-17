@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D127E2806C0E6FF8D18A83D /* Pods_MyPokemonMVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCBBA6C854ED4EFE5D0143BA /* Pods_MyPokemonMVP.framework */; };
 		5D5545A028D5FE6C00BB1C82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D55459F28D5FE6C00BB1C82 /* AppDelegate.swift */; };
 		5D5545A228D5FE6C00BB1C82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5545A128D5FE6C00BB1C82 /* SceneDelegate.swift */; };
 		5D5545A928D5FE6E00BB1C82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5545A828D5FE6E00BB1C82 /* Assets.xcassets */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C02F8BF7206194B69ABF9D9 /* Pods-MyPokemonMVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPokemonMVP.debug.xcconfig"; path = "Target Support Files/Pods-MyPokemonMVP/Pods-MyPokemonMVP.debug.xcconfig"; sourceTree = "<group>"; };
+		599DD1439F5AACB8F9873918 /* Pods-MyPokemonMVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPokemonMVP.release.xcconfig"; path = "Target Support Files/Pods-MyPokemonMVP/Pods-MyPokemonMVP.release.xcconfig"; sourceTree = "<group>"; };
 		5D55459C28D5FE6C00BB1C82 /* MyPokemonMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPokemonMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D55459F28D5FE6C00BB1C82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D5545A128D5FE6C00BB1C82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		5D5545C828D6053100BB1C82 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5D5545CA28D6061300BB1C82 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		5D5545CC28D607FA00BB1C82 /* PokemonAPIClients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAPIClients.swift; sourceTree = "<group>"; };
+		FCBBA6C854ED4EFE5D0143BA /* Pods_MyPokemonMVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPokemonMVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +51,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D127E2806C0E6FF8D18A83D /* Pods_MyPokemonMVP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1670DFFACBDF14F328A2D72F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCBBA6C854ED4EFE5D0143BA /* Pods_MyPokemonMVP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5D55459328D5FE6C00BB1C82 = {
 			isa = PBXGroup;
 			children = (
 				5D55459E28D5FE6C00BB1C82 /* MyPokemonMVP */,
 				5D55459D28D5FE6C00BB1C82 /* Products */,
+				702C5CDF4FBAE72604A4EC1D /* Pods */,
+				1670DFFACBDF14F328A2D72F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +162,16 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		702C5CDF4FBAE72604A4EC1D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C02F8BF7206194B69ABF9D9 /* Pods-MyPokemonMVP.debug.xcconfig */,
+				599DD1439F5AACB8F9873918 /* Pods-MyPokemonMVP.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D5545B028D5FE6E00BB1C82 /* Build configuration list for PBXNativeTarget "MyPokemonMVP" */;
 			buildPhases = (
+				B2F349D13194721639F6BC7C /* [CP] Check Pods Manifest.lock */,
 				5D55459828D5FE6C00BB1C82 /* Sources */,
 				5D55459928D5FE6C00BB1C82 /* Frameworks */,
 				5D55459A28D5FE6C00BB1C82 /* Resources */,
+				E96E277009FD63E7A6159BEC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,6 +241,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B2F349D13194721639F6BC7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyPokemonMVP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E96E277009FD63E7A6159BEC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyPokemonMVP/Pods-MyPokemonMVP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyPokemonMVP/Pods-MyPokemonMVP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyPokemonMVP/Pods-MyPokemonMVP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5D55459828D5FE6C00BB1C82 /* Sources */ = {
@@ -362,6 +431,7 @@
 		};
 		5D5545B128D5FE6E00BB1C82 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C02F8BF7206194B69ABF9D9 /* Pods-MyPokemonMVP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -390,6 +460,7 @@
 		};
 		5D5545B228D5FE6E00BB1C82 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 599DD1439F5AACB8F9873918 /* Pods-MyPokemonMVP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
