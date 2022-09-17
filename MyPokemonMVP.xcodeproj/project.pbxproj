@@ -88,9 +88,9 @@
 			isa = PBXGroup;
 			children = (
 				5D5545C728D6050F00BB1C82 /* Constants */,
-				5D5545C628D6050600BB1C82 /* API */,
 				5D5545B428D5FEA200BB1C82 /* Module */,
 				5D5545B328D5FE9000BB1C82 /* Model */,
+				5D5545C628D6050600BB1C82 /* API */,
 				5D55459F28D5FE6C00BB1C82 /* AppDelegate.swift */,
 				5D5545A128D5FE6C00BB1C82 /* SceneDelegate.swift */,
 				5D5545A828D5FE6E00BB1C82 /* Assets.xcassets */,
@@ -168,7 +168,6 @@
 				2C02F8BF7206194B69ABF9D9 /* Pods-MyPokemonMVP.debug.xcconfig */,
 				599DD1439F5AACB8F9873918 /* Pods-MyPokemonMVP.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
