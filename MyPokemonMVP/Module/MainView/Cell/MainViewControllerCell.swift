@@ -9,8 +9,8 @@ import UIKit
 
 final class MainViewControllerCell: UICollectionViewCell {
 
-    let identifire = "MainViewControllerCell"
-    func nib()-> UINib {
+    static let identifire = "MainViewControllerCell"
+    static func nib()-> UINib {
         UINib(nibName: identifire, bundle: nil)
     }
     
@@ -19,7 +19,8 @@ final class MainViewControllerCell: UICollectionViewCell {
     @IBOutlet private weak var pokemonImage: UIImageView!
     
     func configure() {
-        
+        pokemonId.text = ""
+        pokemonName.text = ""
     }
     
     
