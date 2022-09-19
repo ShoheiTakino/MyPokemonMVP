@@ -12,18 +12,17 @@ import Foundation
 final class PokemonAPIClients {
     
     func pokemonList() async throws -> [Pokemon] {
-        let id = Constants.pokemonIdRange
-        let url = URL(string: "https://pokeapi.co/api/v2/item/\(id)/")!
-        let request = URLRequest(url: url)
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in  //非同期で通信を行う
-            guard let data = data else { return }
-            do {
-                let object = try JSONSerialization.jsonObject(with: data, options: [])  // DataをJsonに変換
-                print(object)
-            } catch let error {
-                print(error)
-            }
+        let ids = Constants.pokemonIdRange
+        for id in ids {
+            let url: URL = URL(string: "https://pokeapi.co/api/v2/item/\(id)/")!
+            let request = URLRequest(url: url)
+            
+            let session: URLSession = URLSession.shared
+            let task: URLSessionDataTask = session.dataTask(with: request, completionHandler: {( data, response, error) in
+                
+                let res: HTTPURLResponse = response as! HTTPURLResponse
+                print(res.statusCode)
+            })
         }
-        task.resume()
     }
 }
