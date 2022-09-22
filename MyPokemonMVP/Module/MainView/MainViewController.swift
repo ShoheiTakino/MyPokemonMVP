@@ -20,6 +20,8 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        PokemonAPIClients.fetchpokemonList([PokemonAPIClients.PokemonLists])
+        self.collectionView.reloadData()
         navigationItem.title = "ポケモン一覧"
         navigationController?.navigationBar.tintColor = .white
     }
@@ -38,10 +40,12 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.layer.cornerRadius = cell.frame.width / 2
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         return
     }
-    
-    
 }
 
+//extension MainViewController: UICollectionViewLayout {
+//
+//}
