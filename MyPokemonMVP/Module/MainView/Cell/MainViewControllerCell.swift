@@ -18,10 +18,11 @@ final class MainViewControllerCell: UICollectionViewCell {
     @IBOutlet private weak var pokemonName: UILabel!
     @IBOutlet private weak var pokemonImage: UIImageView!
     
-    func configure() {
-        pokemonId.text = ""
-        pokemonName.text = ""
+    func configure(pokemon: Pokemon) {
+        pokemonId.text = "No. \(pokemon.id)"
+        pokemonName.text = pokemon.name
+//        pokemonImage.sd_setImage(with: NSURL(string: pokemon.sprites.image) as URL?)
+//        PokeImage?.contentMode = UIView.ContentMode.scaleAspectFit
+//        self.addSubview(PokeImage)
     }
-    
-    
 }

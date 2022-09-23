@@ -20,7 +20,7 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        PokemonAPIClients.fetchpokemonList()
+//        PokemonAPIClients.fetchpokemonList()
         self.collectionView.reloadData()
         navigationItem.title = "ポケモン一覧"
         navigationController?.navigationBar.tintColor = .white
@@ -35,7 +35,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainViewControllerCell.identifire, for: indexPath) as! MainViewControllerCell
-        cell.configure()
+        cell.configure(pokemon: Pokemon[indexPath.row])
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius = cell.frame.width / 2
         return cell
@@ -46,6 +46,15 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
 }
 
-//extension MainViewController: UICollectionViewLayout {
-//
-//}
+extension MainViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let horizontalSpace: CGFloat = 5
+
+        //セルサイズの指定。セルを１行２列で表示
+        let cellSize: CGFloat = self.view.bounds.width / 2 - horizontalSpace
+
+        return CGSize(width: cellSize, height: cellSize)
+    }
+}
