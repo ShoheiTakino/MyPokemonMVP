@@ -7,8 +7,12 @@
 
 import Foundation
 
-struct Pokemon {
+struct Pokemon: Decodable {
     let id: Int
     let name: String
-    let url: URL
+    let sprites: Sprites
+}
+
+struct Sprites: Decodable {
+    var image: String = "front_default"
 }
