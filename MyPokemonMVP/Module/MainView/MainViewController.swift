@@ -20,7 +20,7 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        PokemonAPIClients.fetchpokemonList([PokemonAPIClients.PokemonLists])
+        PokemonAPIClients.fetchpokemonList()
         self.collectionView.reloadData()
         navigationItem.title = "ポケモン一覧"
         navigationController?.navigationBar.tintColor = .white

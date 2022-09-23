@@ -11,7 +11,7 @@ final class PokemonAPIClients {
     
     var PokemonLists: [Pokemon] = []
     
-    func fetchpokemonList() {
+    func fetchpokemonList(){
         
         let ids = Constants.pokemonIdRange
         for id in ids {
